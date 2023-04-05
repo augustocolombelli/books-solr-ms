@@ -6,9 +6,3 @@ services:
     container_name: apache-solr
     ports:
       - "8983:8983"
-    entrypoint:
-      - docker-entrypoint.sh
-      - solr
-      - start
-      - -c
-      - -f
