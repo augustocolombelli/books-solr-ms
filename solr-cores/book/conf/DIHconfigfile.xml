@@ -1,11 +1,10 @@
 <dataConfig>
-    <dataSource type="FileDataSource" encoding="utf=8"/>
+    <dataSource type="FileDataSource"/>
     <document>
         <entity name="book"
                 processor="XPathEntityProcessor"
                 url="/opt/solr/server/solr/book/books.xml"
-                foreach="books/book"
-                transformer="RegexTransformer">
+                forEach="/books/book">
 
             <field column="id" xpath="/books/book/id"/>
             <field column="title" xpath="/books/book/title"/>
