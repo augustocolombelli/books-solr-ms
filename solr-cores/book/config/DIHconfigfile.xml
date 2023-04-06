@@ -1,0 +1,17 @@
+<dataConfig>
+    <dataSource type="FileDataSource" encoding="utf=8"/>
+    <document>
+        <entity name="book"
+                processor="XPathEntityProcessor"
+                stream="true"
+                url="/data/books.xml"
+                foreach="book">
+
+            <field column="id" xpath="/book/id"/>
+            <field column="title" xpath="/book/title"/>
+            <field column="isbn" xpath="/book/isbn"/>
+            <field column="author" xpath="/book/author"/>
+            <field column="description" xpath="/book/description"/>
+        </entity>
+    </document>
+</dataConfig>
