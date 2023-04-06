@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<books>
+    <book>
+        <id>1</id>
+        <title>Building Microservices: Designing Fine-Grained Systems</title>
+        <isbn>1492034029</isbn>
+        <author>Sam Newman</author>
+        <description>test</description>
+    </book>
+    <book>
+        <id>2</id>
+        <title>Domain-Driven Design: Tackling Complexity in the Heart of Software</title>
+        <isbn>0321125215</isbn>
+        <author>Eric Evans</author>
+        <description>test</description>
+    </book>
+    <book>
+        <id>3</id>
+        <title>Implementing Domain-Driven Design</title>
+        <isbn>9780321834577</isbn>
+        <author>Vaughn Vernon</author>
+        <description>test</description>
+    </book>
+</books>

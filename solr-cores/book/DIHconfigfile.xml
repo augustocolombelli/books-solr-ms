@@ -3,15 +3,15 @@
     <document>
         <entity name="book"
                 processor="XPathEntityProcessor"
-                stream="true"
-                url="/data/books.xml"
-                foreach="book">
+                url="/opt/solr/server/solr/book/books.xml"
+                foreach="books/book"
+                transformer="RegexTransformer">
 
-            <field column="id" xpath="/book/id"/>
-            <field column="title" xpath="/book/title"/>
-            <field column="isbn" xpath="/book/isbn"/>
-            <field column="author" xpath="/book/author"/>
-            <field column="description" xpath="/book/description"/>
+            <field column="id" xpath="/books/book/id"/>
+            <field column="title" xpath="/books/book/title"/>
+            <field column="isbn" xpath="/books/book/isbn"/>
+            <field column="author" xpath="/books/book/author"/>
+            <field column="description" xpath="/books/book/description"/>
         </entity>
     </document>
 </dataConfig>
