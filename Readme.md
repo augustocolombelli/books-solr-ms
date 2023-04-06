@@ -48,71 +48,75 @@ Check if all data were created with the command request below:
 > curl --location --request GET 'http://localhost:8983/solr/book/select?q=*:*&rows=100'
 
 ## Things To Know
-The core will be created on `/solr/server/solr`.
+### About config files
+The core will be created on `/solr/server/solr` package inside the solr container.
 
-The `config` folder inner of core, there are the config files:
-- solrconfig.xml: File configurations considering the server. For example, number of servers that will response the requests, urls that will response the user requests.
-- managed-schema: Configuration about index structure. Include the data type, fields that describe de collection. It's necessary to rename to schema.xml to not use the default configuration (stateless);
+All configurations files are in the `config` directory.
+- solrconfig.xml: This file is responsible for server configuration. Example, number of servers that will response the requests, urls that will response the user requests. 
+- managed-schema: The purpose of this file is to store the index structure. Include in this file the data type, fields that describe de collection.
 
-Remove core:
+When necessary to remove a core manually, run the command below inside container:
 > solr delete -c book
 
-Create a core (documents collection):
+When necessary to create a core (documents collection):
 > solr create -c book
 
-Rename the schema:
+If necessary to rename the schema file:
 > cd server/solr/book/conf
 > mv managed-schema schema.xml
 
-
-Import Java classes responsible to read the files. This class is Data Import Handler. Add the config below in `solrconfig.xml`
-
+### Adding data import configuration
+The classes responsible to read the files are configured in the `solrconfig.xml` file.
 ```
-<lib dir="../../../contrib/dataimporthandler/lib" regex=".*\.jar">
-<lib dir="../../../dist/" regex="solr-dataimporthandler-.*\.jar">
-
+  <lib dir="${solr.install.dir:../../../..}/contrib/dataimporthandler/lib" regex=".*\.jar" />
+  <lib dir="${solr.install.dir:../../../..}/dist/" regex="solr-dataimporthandler-\d.*\.jar" />
 ```
 
-
-Add analyser: 
-- Tokenizer: Add field type with a tokenizer responsible for split the data in words (e.g. split by ',', '-' and others). Add this tokenizer to avoid split by characters that is not number or a letter.
-It's necessary to preserve urls and ips, because of this it's necessary to add this tokenizer.
-Ref: https://solr.apache.org/guide/7_1/tokenizers.html
-
-- Filters: Classes that will do some operation in the data. 
-  - StopFilterFactory: Discard words that is not interesting for search (e.g conjunctions, articles). User only substantive and verbs. It's necessary to define which words will be discarded using the key 'words'. Use the file that is available in lang directory. Copy and paste in the config.   
+### Creating a new field type
+The analyser and fields needs to be included in the `managed-schema`.
+- Tokenizer: Add field type with a tokenizer responsible for split the data in words (e.g. split by ',', '-' and others). Add this tokenizer to avoid split by characters that is not number or a letter. It's necessary to preserve urls and ips, because of this it's necessary to add this tokenizer. More details in https://solr.apache.org/guide/7_1/tokenizers.html
+- About the filters
+  - StopFilterFactory: Discard words that is not interesting for search (e.g conjunctions, articles). User only substantive and verbs. It's necessary to define which words will be discarded using the key 'words'. Use the file that is available in lang directory. Copy and paste in the config.
   - LowerCaseFilterFactory: Change all words to lowercase; Convert uppercase to lowercase;
-  - ASCIIFoldingFilterFactory: Normalize all letters like 'ç' 'á'. All special characters. 
+  - ASCIIFoldingFilterFactory: Normalize all letters like 'ç' 'á'. All special characters.
   - KeywordRepeatFilterFactory: Used to duplicate all words
   - BrazilianStemFilterFactory: Split by prefix (Learn, Learning, Learned)
-  - RemoveDuplicatesTokenFilterFactory: If word dos not have a prefix, will remove the word to not have the same word. 
+  - RemoveDuplicatesTokenFilterFactory: If word dos not have a prefix, will remove the word to not have the same word.
+
 ```
-<analyzer>
-  <tokenizer class="solr.UAX29URLEmailTokenizerFactory"/>
-</analyzer>
+  <fieldType name="book-text-field" class="solr.TextField">
+    <analyzer type="index">
+      <tokenizer class="solr.UAX29URLEmailTokenizerFactory"/>
+      <filter class="solr.StopFilterFactory" words="stopwords_en.txt" ignoreCase="true"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+      <filter class="solr.KeywordRepeatFilterFactory"/>
+      <filter class="solr.EnglishMinimalStemFilterFactory"/>
+      <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
+    </analyzer>
+    <analyzer type="query">
+      <tokenizer class="solr.UAX29URLEmailTokenizerFactory"/>
+      <filter class="solr.StopFilterFactory" words="stopwords_en.txt" ignoreCase="true"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+      <filter class="solr.KeywordRepeatFilterFactory"/>
+      <filter class="solr.EnglishMinimalStemFilterFactory"/>
+      <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
+    </analyzer>
+  </fieldType>
 ```
-
-Add analyser query. Search needs to have same operation that field type.
-
-
 
 ### Add fields to schema
-- indexed: true if this field will be stored as a index
-- stored: Aldo should store the real value without the filters. Avoid use this option for large fields. 
+The fields must be included in the `managed-schema` file.
+- indexed: true if this field will be stored as an index.
+- stored: Store the real value without the filters. Avoid use this option for large fields. 
 ```
-    <field name="title" type="book-text-field" indexed="true" stored="true" />
-    <field name="isbn" type="string" indexed="true" stored="true" />
-    <field name="author" type="book-text-field" indexed="true" stored="true" />
-    <field name="description" type="book-text-field" indexed="true" stored="false" />
+  <field name="author" type="book-text-field" indexed="true" stored="true"/>
+  <field name="description" type="book-text-field" indexed="true" stored="false"/>
+  <field name="id" type="string" multiValued="false" indexed="true" required="true" stored="true"/>
+  <field name="isbn" type="string" indexed="true" stored="true"/>
+  <field name="title" type="book-text-field" indexed="true" stored="true"/>
 ```
 
-### Import the data
-http://localhost:8983/solr/book/dataimport?command=full-import&commit=true
-- dataimport: data import that was defined in the configs;
-- command=full-import: import all content;
-- commit=true: It will be not necessary to create again the index, when the server is restarted
-
-## Some commands
+### Some commands
 Stop the container:
 > docker container stop apache-solr
 > docker system prune
@@ -147,7 +151,6 @@ Copy another files:
 > docker cp apache-solr:/opt/solr/server/solr/book/conf/protwords.txt ./
 > docker cp apache-solr:/opt/solr/server/solr/book/conf/stopwords.txt ./
 > docker cp apache-solr:/opt/solr/server/solr/book/conf/synonyms.txt ./
-
 
 Ping:
 > docker exec -ti books-ms ping solr
