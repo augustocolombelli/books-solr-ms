@@ -23,9 +23,9 @@ public class BookController {
 
     @PostMapping(value = "/books/init")
     public void addBooks() {
-        bookRepository.save(new Book("Building Microservices: Designing Fine-Grained Systems", "1492034029", "Sam Newman"));
-        bookRepository.save(new Book("Domain-Driven Design: Tackling Complexity in the Heart of Software", "0321125215", "Eric Evans"));
-        bookRepository.save(new Book("Implementing Domain-Driven Design", "9780321834577", "Vaughn Vernon"));
+        bookRepository.save(new Book("Building Microservices: Designing Fine-Grained Systems", "1492034029", "Sam Newman", "test"));
+        bookRepository.save(new Book("Domain-Driven Design: Tackling Complexity in the Heart of Software", "0321125215", "Eric Evans", "test"));
+        bookRepository.save(new Book("Implementing Domain-Driven Design", "9780321834577", "Vaughn Vernon", "test"));
     }
 
 }
