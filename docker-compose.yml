@@ -6,3 +6,5 @@ services:
     container_name: apache-solr
     ports:
       - "8983:8983"
+    volumes:
+      - ./solr-cores/book:/opt/solr/server/solr/book
