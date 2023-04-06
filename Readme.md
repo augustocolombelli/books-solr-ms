@@ -1,4 +1,5 @@
 # books-solr-ms
+The books solr service act as a service responsible to make request to apache solr to get a list of books. 
 
 ## Table of contents
 * [Technologies](#technologies)
