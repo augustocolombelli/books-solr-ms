@@ -23,10 +23,15 @@ Package the app
 
 If necessary, remove containers and images and create them again:
 > docker container stop solr
+
 > docker container stop books-ms
+
 > docker rm solr
+
 > docker rm books-ms
+
 > docker rmi books-ms:latest
+
 > docker rmi solr:7.6
 
 ### Start the service
@@ -64,6 +69,7 @@ When necessary to create a core (collection of documents):
 
 If necessary to rename the schema file:
 > cd server/solr/book/conf
+
 > mv managed-schema schema.xml
 
 ### Adding data import configuration
@@ -119,7 +125,9 @@ The fields must be included in the `managed-schema` file.
 ### Some commands
 Stop the container:
 > docker container stop apache-solr
+
 > docker system prune
+
 > docker compose up -d
 
 Open cmd container:
@@ -148,8 +156,11 @@ Copy lang from container:
 
 Copy another files:
 > docker cp apache-solr:/opt/solr/server/solr/book/conf/params.json ./
+
 > docker cp apache-solr:/opt/solr/server/solr/book/conf/protwords.txt ./
+
 > docker cp apache-solr:/opt/solr/server/solr/book/conf/stopwords.txt ./
+
 > docker cp apache-solr:/opt/solr/server/solr/book/conf/synonyms.txt ./
 
 Ping:
