@@ -116,6 +116,11 @@
     <field name="_root_" type="string" indexed="true" stored="false" docValues="false" />
     <field name="_text_" type="text_general" indexed="true" stored="false" multiValued="true"/>
 
+    <field name="title" type="book-text-field" indexed="true" stored="true" />
+    <field name="isbn" type="string" indexed="true" stored="true" />
+    <field name="author" type="book-text-field" indexed="true" stored="true" />
+    <field name="description" type="book-text-field" indexed="true" stored="false" />
+
     <!-- This can be enabled, in case the client does not know what fields may be searched. It isn't enabled by default
          because it's very expensive to index everything twice. -->
     <!-- <copyField source="*" dest="_text_"/> -->
@@ -191,7 +196,7 @@
          field first in an ascending sort and last in a descending sort.
     -->
 
-    <fieldType name="book-text" class="solr.TextField">
+    <fieldType name="book-text-field" class="solr.TextField">
         <analyzer type="index">
             <tokenizer class="UAX29URLEmailTokenizerFactory" />
             <filter class="solr.StopFilterFactory" words="stopwords_en.txt" ignoreCase="true" />
