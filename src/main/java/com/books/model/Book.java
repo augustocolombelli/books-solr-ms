@@ -20,7 +20,7 @@ public class Book {
     @Field
     private final String author;
 
-    public Book(String title, String isbn, String author, String description) {
+    public Book(String title, String isbn, String author) {
         this.title = title;
         this.isbn = isbn;
         this.author = author;
