@@ -83,6 +83,10 @@
 
   <lib dir="${solr.install.dir:../../../..}/contrib/velocity/lib" regex=".*\.jar" />
   <lib dir="${solr.install.dir:../../../..}/dist/" regex="solr-velocity-\d.*\.jar" />
+
+  <lib dir="../../../contrib/dataimporthandler/lib" regex=".*\.jar" />
+  <lib dir="../../../dist/" regex="solr-dataimporthandler-.*\.jar" />
+
   <!-- an exact 'path' can be used instead of a 'dir' to specify a
        specific jar file.  This will cause a serious error to be logged
        if it can't be loaded.
@@ -677,6 +681,11 @@
        not be initialized until the first request that uses it.
 
     -->
+  <requestHandler name="/dataimport" class="org.apache.solr.handler.dataimport.DataImportHandler">
+    <lst name="defaults">
+      <str name="config">DIHconfigfile.xml</str>
+    </lst>
+  </requestHandler>
   <!-- SearchHandler
 
        http://wiki.apache.org/solr/SearchHandler
