@@ -20,14 +20,10 @@ public class Book {
     @Field
     private final String author;
 
-    @Field
-    private final String description;
-
     public Book(String title, String isbn, String author, String description) {
         this.title = title;
         this.isbn = isbn;
         this.author = author;
-        this.description = description;
     }
 
     public String getId() {
@@ -46,7 +42,4 @@ public class Book {
         return author;
     }
 
-    public String getDescription() {
-        return description;
-    }
 }
