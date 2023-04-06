@@ -198,7 +198,7 @@
 
     <fieldType name="book-text-field" class="solr.TextField">
         <analyzer type="index">
-            <tokenizer class="UAX29URLEmailTokenizerFactory" />
+            <tokenizer class="solr.UAX29URLEmailTokenizerFactory" />
             <filter class="solr.StopFilterFactory" words="stopwords_en.txt" ignoreCase="true" />
             <filter class="solr.LowerCaseFilterFactory" />
             <filter class="solr.KeywordRepeatFilterFactory" />
@@ -206,7 +206,7 @@
             <filter class="solr.RemoveDuplicatesTokenFilterFactory" />
         </analyzer>
         <analyzer type="query">
-            <tokenizer class="UAX29URLEmailTokenizerFactory" />
+            <tokenizer class="solr.UAX29URLEmailTokenizerFactory" />
             <filter class="solr.StopFilterFactory" words="stopwords_en.txt" ignoreCase="true" />
             <filter class="solr.LowerCaseFilterFactory" />
             <filter class="solr.KeywordRepeatFilterFactory" />
