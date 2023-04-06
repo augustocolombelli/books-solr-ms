@@ -1,9 +1,16 @@
-
 version : '3'
 services:
+  books-ms:
+    image: books-ms:latest
+    container_name: books-ms
+    build: .
+    depends_on:
+      - solr
+    ports:
+      - "8080:8080"
   solr:
     image: solr:7.6
-    container_name: apache-solr
+    container_name: solr
     ports:
       - "8983:8983"
     volumes:
