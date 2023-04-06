@@ -33,7 +33,7 @@ Run docker compose to create the containers:
 > docker compose up -d
 
 Run a request to get the data as in the example below:
-> curl --location --request GET 'http://localhost:8080/books/<any-text>'
+> curl --location --request GET 'http://localhost:8080/books/any-text'
 
 An example to return data with 'microservice' in the title, author or description:
 > curl --location --request GET 'http://localhost:8080/books/microservice'
