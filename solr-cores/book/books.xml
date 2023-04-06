@@ -179,4 +179,35 @@
             Url: https://www.amazon.com.br/Building-Event-Driven-Microservices-Adam-Bellemare/dp/1492057894
         </description>
     </book>
+    <book>
+        <id>11</id>
+        <title>The DevOps Handbook: How to Create World-Class Agility, Reliability, Security in Technology Organizations</title>
+        <isbn>1950508404</isbn>
+        <author>Gene Kim (Author), Jez Humble (Author), Patrick Debois (Author), John Willis (Author), Nicole Forsgren (Author)</author>
+        <description>
+            “[The DevOps Handbook] remains a must-read for any organization seeking to scale up its IT capability and expand DevOps practices across multiple departments or lines of business.” ―Mike Perrow, TechBeacon
+            For years, The DevOps Handbook has been the definitive guide for taking the successes laid out in the bestselling The Phoenix Project and applying them in any organization. Now, with this fully updated and expanded edition, it's time to take DevOps out of the IT department and apply it across the full business.
+            Technology is now at the core of every company, no matter the business model or product. The theories and practices laid out in The DevOps Handbook are tools to be used by anyone from across the organization to create joy and succeed in the marketplace.
+            The second edition features 15 new case studies, including stories from Adidas, American Airlines, Fannie Mae, Target, and the US Air Force. In addition, renowned researcher and coauthor of Accelerate, Dr. Nicole Forsgren, provides her insights through new and updated material and research. With over 100 pages of new content throughout the book, this expanded edition is a must read for anyone who works with technology.
+            “[The DevOps Handbook is] a practical roadmap to improving IT in any organization. It's also the most valuable book on software development I've read in the past 10 years.” ―Adam Hawkins, software developer and host of the podcast SmallBatches
+            Url: https://www.amazon.com/DevOps-Handbook-World-Class-Reliability-Organizations/dp/1950508404/
+        </description>
+    </book>
+    <book>
+        <id>12</id>
+        <title>The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win</title>
+        <isbn>1942788290</isbn>
+        <author>Gene Kim (Author), Kevin Behr (Author), George Spafford (Author)</author>
+        <description>
+            ***Over a half-million sold! And available now, the Wall Street Journal Bestselling sequel The Unicorn Project***
+            “Every person involved in a failed IT project should be forced to read this book.”―TIM O'REILLY, Founder  CEO of O'Reilly Media
+            “The Phoenix Project is a must read for business and IT executives who are struggling with the growing complexity of IT.”―JIM WHITEHURST, President and CEO, Red Hat, Inc.
+            Five years after this sleeper hit took on the world of IT and flipped it on it's head, the 5th Anniversary Edition of The Phoenix Project continues to guide IT in the DevOps revolution.
+            In this newly updated and expanded edition of the bestselling The Phoenix Project, co-author Gene Kim includes a new afterword and a deeper delve into the Three Ways as described in The DevOps Handbook.
+            Bill, an IT manager at Parts Unlimited, has been tasked with taking on a project critical to the future of the business, code named Phoenix Project. But the project is massively over budget and behind schedule. The CEO demands Bill must fix the mess in ninety days or else Bill's entire department will be outsourced.
+            With the help of a prospective board member and his mysterious philosophy of The Three Ways, Bill starts to see that IT work has more in common with a manufacturing plant work than he ever imagined. With the clock ticking, Bill must organize work flow streamline interdepartmental communications, and effectively serve the other business functions at Parts Unlimited.
+            In a fast-paced and entertaining style, three luminaries of the DevOps movement deliver a story that anyone who works in IT will recognize. Readers will not only learn how to improve their own IT organizations, they'll never view IT the same way again.
+            “This book is a gripping read that captures brilliantly the dilemmas that face companies which depend on IT, and offers real-world solutions.”―JEZ HUMBLE, Co-author of Continuous Delivery, Lean Enterprise, Accelerate, and The DevOps Handbook
+        </description>
+    </book>
 </books>
