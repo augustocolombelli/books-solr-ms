@@ -4,20 +4,179 @@
         <title>Building Microservices: Designing Fine-Grained Systems</title>
         <isbn>1492034029</isbn>
         <author>Sam Newman</author>
-        <description>test</description>
+        <description>
+            As organizations shift from monolithic applications to smaller, self-contained microservices, distributed systems have become more fine-grained. But developing these new systems brings its own host of problems. This expanded second edition takes a holistic view of topics that you need to consider when building, managing, and scaling microservices architectures.
+            Through clear examples and practical advice, author Sam Newman gives everyone from architects and developers to testers and IT operators a firm grounding in the concepts. You'll dive into the latest solutions for modeling, integrating, testing, deploying, and monitoring your own autonomous services. Real-world cases reveal how organizations today manage to get the most out of these architectures.
+            Microservices technologies continue to move quickly. This book brings you up to speed.
+            - Get new information on user interfaces, container orchestration, and serverless
+            - Align system design with your organization's goals
+            - Explore options for integrating a service with your system
+            - Understand how to independently deploy microservices
+            - Examine the complexities of testing and monitoring distributed services
+            - Manage security with expanded content around user-to-service and service-to-service models
+            Url: https://www.amazon.com.br/Building-Microservices-Second-Sam-Newman/dp/1492034029
+        </description>
     </book>
     <book>
         <id>2</id>
         <title>Domain-Driven Design: Tackling Complexity in the Heart of Software</title>
         <isbn>0321125215</isbn>
         <author>Eric Evans</author>
-        <description>test</description>
+        <description>
+            Software design thought leader and founder of Domain Language, Eric Evans, provides a systematic approach to domain-driven design, presenting an extensive set of design best practices, experience-based techniques, and fundamental principles that facilitate the development of software projects facing complex domains. Intertwining system design and development practice, this book incorporates numerous examples based on actual projects to illustrate the application of domain-driven design to real-world software modeling and development.
+            - Domain Model: Part I outlines the goals of domain-driven development, defines terms, and gives an overview of the implications of using the domain model to drive communication and design
+            - Model-Driven Design: Part II condenses a core of best practices in object-oriented domain modeling into a set of basic building blocks and focuses on the kinds of decisions that keep the model and implementation aligned with each other, each reinforcing the other's effectiveness
+            - Refactoring: Part III delves into modeling principles that can guide choices along the way, and techniques that help direct the search
+            - Strategic Design: Part IV explores a triad of principles that apply to the system as a whole: context, distillation, and large-scale structure
+            - Throughout the book, discussions are illustrated not with over-simplified, "" problems, but with realistic examples adapted from actual projects. With this book in hand, object-oriented developers, system analysts, and designers will have the guidance they need to organize and focus their work, create rich and useful domain models, and leverage those models into quality, long-lasting software implementations.
+            "The book is a fun read. Eric has lots of interesting stories, and he has a way with words. I see this book as essential reading for software developers--it is a future classic."
+            --Ralph Johnson, author of Design Patterns
+            Url: https://www.amazon.com.br/Domain-Driven-Design-Tackling-Complexity-Software-ebook/dp/B00794TAUG/
+        </description>
     </book>
     <book>
         <id>3</id>
         <title>Implementing Domain-Driven Design</title>
         <isbn>9780321834577</isbn>
         <author>Vaughn Vernon</author>
-        <description>test</description>
+        <description>
+            “For software developers of all experience levels looking to improve their results, and design and implement domain-driven enterprise applications consistently with the best current state of professional practice, Implementing Domain-Driven Design will impart a treasure trove of knowledge hard won within the DDD and enterprise application architecture communities over the last couple decades.”
+            –Randy Stafford, Architect At-Large, Oracle Coherence Product Development
+            “This book is a must-read for anybody looking to put DDD into practice.”
+            –Udi Dahan, Founder of NServiceBus
+            Implementing Domain-Driven Design presents a top-down approach to understanding domain-driven design (DDD) in a way that fluently connects strategic patterns to fundamental tactical programming tools. Vaughn Vernon couples guided approaches to implementation with modern architectures, highlighting the importance and value of focusing on the business domain while balancing technical considerations.
+            Building on Eric Evans’ seminal book, Domain-Driven Design, the author presents practical DDD techniques through examples from familiar domains. Each principle is backed up by realistic Java examples–all applicable to C# developers–and all content is tied together by a single case study: the delivery of a large-scale Scrum-based SaaS system for a multitenant environment.
+            The author takes you far beyond “DDD-lite” approaches that embrace DDD solely as a technical toolset, and shows you how to fully leverage DDD’s “strategic design patterns” using Bounded Context, Context Maps, and the Ubiquitous Language. Using these techniques and examples, you can reduce time to market and improve quality, as you build software that is more flexible, more scalable, and more tightly aligned to business goals.
+            Coverage includes
+            - Getting started the right way with DDD, so you can rapidly gain value from it
+            - Using DDD within diverse architectures, including Hexagonal, SOA, REST, CQRS, Event-Driven, and Fabric/Grid-Based
+            - Appropriately designing and applying Entities–and learning when to use Value Objects instead
+            - Mastering DDD’s powerful new Domain Events technique
+            - Designing Repositories for ORM, NoSQL, and other databases
+            Url: https://www.amazon.com.br/Implementing-Domain-Driven-Design-English-Vaughn-ebook/dp/B00BCLEBN8
+        </description>
+    </book>
+    <book>
+        <id>4</id>
+        <title>Patterns of Enterprise Application Architecture</title>
+        <isbn>0321127420</isbn>
+        <author>Martin Fowler</author>
+        <description>
+            The practice of enterprise application development has benefited from the emergence of many new enabling technologies. Multi-tiered object-oriented platforms, such as Java and .NET, have become commonplace. These new tools and technologies are capable of building powerful applications, but they are not easily implemented. Common failures in enterprise applications often occur because their developers do not understand the architectural lessons that experienced object developers have learned.
+            Patterns of Enterprise Application Architecture is written in direct response to the stiff challenges that face enterprise application developers. The author, noted object-oriented designer Martin Fowler, noticed that despite changes in technology--from Smalltalk to CORBA to Java to .NET--the same basic design ideas can be adapted and applied to solve common problems. With the help of an expert group of contributors, Martin distills over forty recurring solutions into patterns. The result is an indispensable handbook of solutions that are applicable to any enterprise application platform.
+            This book is actually two books in one. The first section is a short tutorial on developing enterprise applications, which you can read from start to finish to understand the scope of the book's lessons. The next section, the bulk of the book, is a detailed reference to the patterns themselves. Each pattern provides usage and implementation information, as well as detailed code examples in Java or C#. The entire book is also richly illustrated with UML diagrams to further explain the concepts.
+            Armed with this book, you will have the knowledge necessary to make important architectural decisions about building an enterprise application and the proven patterns for use when building them.
+            The topics covered include:
+            - Dividing an enterprise application into layers
+            - The major approaches to organizing business logic
+            - An in-depth treatment of mapping between objects and relational databases
+            - Using Model-View-Controller to organize a Web presentation
+            - Handling concurrency for data that spans multiple transactions
+            - Designing distributed object interfaces
+            Url: https://www.amazon.com.br/Patterns-Enterprise-Application-Architecture-Addison-Wesley-ebook/dp/B008OHVDFM
+        </description>
+    </book>
+    <book>
+        <id>5</id>
+        <title>Strategic Monoliths and Microservices: Driving Innovation Using Purposeful Architecture</title>
+        <isbn>0137355467</isbn>
+        <author>Vaughn Vernon and Tomasz Jaskula</author>
+        <description>
+            Make Software Architecture Choices That Maximize Value and Innovation
+            "[Vernon and Jaskula] provide insights, tools, proven best practices, and architecture styles both from the business and engineering viewpoint. . . . This book deserves to become a must-read for practicing software engineers, executives as well as senior managers."
+            --Michael Stal, Certified Senior Software Architect, Siemens Technology
+            Strategic Monoliths and Microservices helps business decision-makers and technical team members clearly understand their strategic problems through collaboration and identify optimal architectural approaches, whether the approach is distributed microservices, well-modularized monoliths, or coarser-grained services partway between the two.
+            Leading software architecture experts Vaughn Vernon and Tomasz Jaskula show how to make balanced architectural decisions based on need and purpose, rather than hype, so you can promote value and innovation, deliver more evolvable systems, and avoid costly mistakes. Using realistic examples, they show how to construct well-designed monoliths that are maintainable and extensible, and how to gradually redesign and reimplement even the most tangled legacy systems into truly effective microservices.
+
+            - Link software architecture planning to business innovation and digital transformation
+            - Overcome communication problems to promote experimentation and discovery-based innovation
+            - Master practices that support your value-generating goals and help you invest more strategically
+            - Compare architectural styles that can lead to versatile, adaptable applications and services
+            - Recognize when monoliths are your best option and how best to architect, design, and implement them
+            - Learn when to move monoliths to microservices and how to do it, whether they're modularized or a "Big Ball of Mud"
+            - Register your book for convenient access to downloads, updates, and/or corrections as they become available. See inside book for details.
+            Url: https://www.amazon.com.br/Strategic-Monoliths-Microservices-Innovation-Architecture/dp/0137355467
+        </description>
+    </book>
+    <book>
+        <id>6</id>
+        <title>Refactoring: Improving the Design of Existing Code</title>
+        <isbn>0134757599</isbn>
+        <author>Martin Fowler</author>
+        <description>
+            Refactoring improves the design of existing code and enhances software maintainability, as well as making existing code easier to understand. Original Agile Manifesto signer and software development thought leader, Martin Fowler, provides a catalog of refactorings that explains why you should refactor; how to recognize code that needs refactoring; and how to actually do it successfully, no matter what language you use.
+            - Refactoring principles: understand the process and general principles of refactoring
+            - Code smells: recognize "bad smells" in code that signal opportunities to refactor
+            - Application improvement: quickly apply useful refactorings to make a program easier to comprehend and change
+            - Building tests: writing good tests increases a programmer's effectiveness
+            - Moving features: an important part of refactoring is moving elements between contexts
+            - Data structures: a collection of refactorings to organize data, an important role in programs
+            - Conditional Logic: use refactorings to make conditional sections easier to understand
+            - APIs: modules and their functions are the building blocks of our software, and APIs are the joints that we use to plug them together
+            - Inheritance: it is both very useful and easy to misuse, and it's often hard to see the misuse until it's in the rear-view mirror---refactorings can fix the misuse
+            Examples are written in JavaScript, but you shouldn't find it difficult to adapt the refactorings to whatever language you are currently using as they look mostly the same in different languages.
+            "Whenever you read [Refactoring], it's time to read it again. And if you haven't read it yet, please do before writing another line of code." -David Heinemeier Hansson, Creator of Ruby on Rails, Founder CTO at Basecamp
+            "Any fool can write code that a computer can understand. Good programmers write code that humans can understand." -M. Fowler (1999)
+            Url: https://www.amazon.com.br/Refactoring-Improving-Design-Existing-Code/dp/0134757599
+        </description>
+    </book>
+    <book>
+        <id>7</id>
+        <title>Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions</title>
+        <isbn>9780321200686</isbn>
+        <author>Gregor Hohpe and Bobby Woolf</author>
+        <description>
+            Enterprise Integration Patterns provides an invaluable catalog of sixty-five patterns, with real-world solutions that demonstrate the formidable of messaging and help you to design effective messaging solutions for your enterprise.
+            The authors also include examples covering a variety of different integration technologies, such as JMS, MSMQ, TIBCO ActiveEnterprise, Microsoft BizTalk, SOAP, and XSL. A case study describing a bond trading system illustrates the patterns in practice, and the book offers a look at emerging standards, as well as insights into what the future of enterprise integration might hold.
+            This book provides a consistent vocabulary and visual notation framework to describe large-scale integration solutions across many technologies. It also explores in detail the advantages and limitations of asynchronous messaging architectures. The authors present practical advice on designing code that connects an application to a messaging system, and provide extensive information to help you determine when to send a message, how to route it to the proper destination, and how to monitor the health of a messaging system. If you want to know how to manage, monitor, and maintain a messaging system once it is in use, get this book.
+            Url: https://www.amazon.com.br/Enterprise-Integration-Patterns-Designing-Deploying/dp/0321200683
+        </description>
+    </book>
+    <book>
+        <id>8</id>
+        <title>Design Patterns: Elements of Reusable Object-Oriented Software</title>
+        <isbn>0201633612</isbn>
+        <author>Erich Gamma (Autor), Richard Helm (Autor), Ralph Johnson Dr (Autor), John Vlissides (Autor)</author>
+        <description>
+            Capturing a wealth of experience about the design of object-oriented software, four top-notch designers present a catalog of simple and succinct solutions to commonly occurring design problems. Previously undocumented, these 23 patterns allow designers to create more flexible, elegant, and ultimately reusable designs without having to rediscover the design solutions themselves.
+            The authors begin by describing what patterns are and how they can help you design object-oriented software. They then go on to systematically name, explain, evaluate, and catalog recurring designs in object-oriented systems. With Design Patterns as your guide, you will learn how these important patterns fit into the software development process, and how you can leverage them to solve your own design problems most efficiently.
+            Each pattern describes the circumstances in which it is applicable, when it can be applied in view of other design constraints, and the consequences and trade-offs of using the pattern within a larger design. All patterns are compiled from real systems and are based on real-world examples. Each pattern also includes code that demonstrates how it may be implemented in object-oriented programming languages like C++ or Smalltalk.
+            Url: https://www.amazon.com.br/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612
+        </description>
+    </book>
+    <book>
+        <id>9</id>
+        <title>Monolith to Microservices: Evolutionary Patterns to Transform Your Monolith</title>
+        <isbn>1492047848</isbn>
+        <author>Sam Newman</author>
+        <description>
+            How do you detangle a monolithic system and migrate it to a microservice architecture? How do you do it while maintaining business-as-usual? As a companion to Sam Newman's extremely popular Building Microservices, this new book details a proven method for transitioning an existing monolithic system to a microservice architecture.
+            With many illustrative examples, insightful migration patterns, and a bevy of practical advice to transition your monolith enterprise into a microservice operation, this practical guide covers multiple scenarios and strategies for a successful migration, from initial planning all the way through application and database decomposition. You'll learn several tried and tested patterns and techniques that you can use as you migrate your existing architecture.
+            - Ideal for organizations looking to transition to microservices, rather than rebuild
+            - Helps companies determine whether to migrate, when to migrate, and where to begin
+            - Addresses communication, integration, and the migration of legacy systems
+            - Discusses multiple migration patterns and where they apply
+            - Provides database migration examples, along with synchronization strategies
+            - Explores application decomposition, including several architectural refactoring patterns
+            - Delves into details of database decomposition, including the impact of breaking referential and transactional integrity, new failure modes, and more
+            Url: https://www.amazon.com.br/Monolith-Microservices-Sam-Newman/dp/1492047848
+        </description>
+    </book>
+    <book>
+        <id>10</id>
+        <title>Building Event-Driven Microservices: Leveraging Organizational Data at Scale</title>
+        <isbn>1492057894</isbn>
+        <author>Adam Bellemare</author>
+        <description>
+            Organizations today often struggle to balance business requirements with ever-increasing volumes of data. Additionally, the demand for leveraging large-scale, real-time data is growing rapidly among the most competitive digital industries. Conventional system architectures may not be up to the task. With this practical guide, you'll learn how to leverage large-scale data usage across the business units in your organization using the principles of event-driven microservices.
+            Author Adam Bellemare takes you through the process of building an event-driven microservice-powered organization. You'll reconsider how data is produced, accessed, and propagated across your organization. Learn powerful yet simple patterns for unlocking the value of this data. Incorporate event-driven design and architectural principles into your own systems. And completely rethink how your organization delivers value by unlocking near-real-time access to data at scale.
+            You'll learn:
+            How to leverage event-driven architectures to deliver exceptional business value
+            The role of microservices in supporting event-driven designs
+            Architectural patterns to ensure success both within and between teams in your organization
+            Application patterns for developing powerful event-driven microservices
+            Components and tooling required to get your microservice ecosystem off the ground
+            Url: https://www.amazon.com.br/Building-Event-Driven-Microservices-Adam-Bellemare/dp/1492057894
+        </description>
     </book>
 </books>
