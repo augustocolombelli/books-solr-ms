@@ -21,19 +21,6 @@ Run maven clean to remove all target content:
 Package the app
 > ./mvnw package
 
-If necessary, remove containers and images and create them again:
-> docker container stop solr
-
-> docker container stop books-ms
-
-> docker rm solr
-
-> docker rm books-ms
-
-> docker rmi books-ms:latest
-
-> docker rmi solr:7.6
-
 ### Start the service
 Run docker compose to create the containers:
 > docker compose up -d
@@ -168,6 +155,19 @@ Ping:
 
 List images:
 > docker images 
+
+If necessary, remove containers and images and create them again:
+> docker container stop solr
+
+> docker container stop books-ms
+
+> docker rm solr
+
+> docker rm books-ms
+
+> docker rmi books-ms:latest
+
+> docker rmi solr:7.6
 
 Remove books-ms image
 > docker rmi books-ms:latest
