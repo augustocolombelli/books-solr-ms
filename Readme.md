@@ -1,4 +1,4 @@
-# books solr service
+# Books Solr Service
 The books solr service act as a service responsible to make request to apache solr to get a list of books. The purpose of this service is to return a list of books, considering a word that is passed in the request. The service will search for references to this word in a list of books with author, title and description of the book. The service uses some analysers to help with the indexing process that have been added to the new data type called `book-text-field`. 
 
 ## Table of contents
